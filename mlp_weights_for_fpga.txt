@@ -1,0 +1,13 @@
+Layer 0 (Linear)  in_features=4  out_features=4
+  neurônio 0: weights = [-0.118292, -0.253516, -0.445719, -0.404179], bias = -0.046213
+  neurônio 1: weights = [-0.326143, 0.363044, -0.332116, -0.439777], bias = -0.408539
+  neurônio 2: weights = [0.360319, 0.050990, 0.351936, 0.383643], bias = -1.195297
+  neurônio 3: weights = [0.093991, -0.470071, 0.146670, 0.260826], bias = 1.020519
+
+Layer 1 (Linear)  in_features=4  out_features=3
+  neurônio 0: weights = [-0.284672, -0.465788, 0.344312, -0.153523], bias = -1.727685
+  neurônio 1: weights = [0.110681, 0.098875, -0.379194, -0.466944], bias = -0.368592
+  neurônio 2: weights = [0.008805, 0.338695, 0.370569, -0.258009], bias = -1.726182
+
+Layer 2 (Linear)  in_features=3  out_features=1
+  neurônio 0: weights = [2.255489, 0.314389, 1.532014], bias = -2.167732
