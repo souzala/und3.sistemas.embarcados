@@ -1,0 +1,32 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+-- Tipo para vetor de 4 inteiros
+type int_array4 is array(0 to 3) of integer range 0 to 255;
+
+entity neuronio is
+    port (
+        valor  : in  int_array4;
+        peso   : in  int_array4;
+        bias   : in  integer range 0 to 255;
+        saida  : out integer range 0 to 1023
+    );
+end entity;
+
+architecture rtl of neuronio is
+begin
+
+    process(valor, peso, bias)
+        variable acc : integer range 0 to 1023;
+    begin
+        acc := bias;
+
+        for i in 0 to 3 loop
+            acc := acc + valor(i) * peso(i);
+        end loop;
+
+        saida <= acc;
+    end process;
+
+end architecture;
