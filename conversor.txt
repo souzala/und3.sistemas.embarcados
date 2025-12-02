@@ -1,0 +1,17 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity convert4bits_to_fixed is
+    port (
+        bits4 : in  std_logic_vector(3 downto 0);
+        valor : out integer range 0 to 15
+    );
+end entity;
+
+architecture rtl of convert4bits_to_fixed is
+begin
+	-- Converte os 4 bits para inteiro
+	valor <= to_integer(unsigned(bits4));
+
+end architecture;
